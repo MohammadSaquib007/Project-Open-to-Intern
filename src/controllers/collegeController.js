@@ -13,7 +13,6 @@ const createCollege = async function (req, res) {
         if (!isValidBody(requestBody)) return res.status(400).send({ status: false, messege: "plz provide request body" })
         if (!isValidAbvr(name))  return res.status(400).send({ status: false, messege: "plz provide valid name" })
         if (!isValidName(fullName))  return res.status(400).send({ status: false, messege: "plz provide valid fullName" })
-        
         //validation for url
       let correctLink = false
       await axios.get(logoLink)
